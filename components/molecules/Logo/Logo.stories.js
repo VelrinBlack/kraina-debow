@@ -13,5 +13,5 @@ export const Default = ({ hasBackground }) => (
 );
 
 Default.propTypes = {
-  hasBackground: PropTypes.bool,
+  hasBackground: PropTypes.bool.isRequired,
 };

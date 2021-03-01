@@ -1,8 +1,9 @@
 import StyledWrapper from './Navbar.styles';
 import NavbarLink from 'components/atoms/NavbarLink/NavbarLink';
+import PropTypes from 'prop-types';
 
-const Navbar = () => (
-  <StyledWrapper>
+const Navbar = ({ isCentered = false }) => (
+  <StyledWrapper className={isCentered && 'centered'}>
     <ul>
       <NavbarLink name="Strona Główna" location="/" />
       <NavbarLink name="Blog" location="/blog" />
@@ -11,5 +12,9 @@ const Navbar = () => (
     </ul>
   </StyledWrapper>
 );
+
+Navbar.propTypes = {
+  isCentered: PropTypes.bool,
+};
 
 export default Navbar;
