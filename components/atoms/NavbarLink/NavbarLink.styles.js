@@ -5,7 +5,6 @@ const StyledWrapper = styled.li`
 
   a {
     color: white;
-    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: ${({ isActive }) => (isActive ? '700' : '400')};
     text-decoration: none;

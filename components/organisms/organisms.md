@@ -1,1 +1,0 @@
-Empty organisms directory
