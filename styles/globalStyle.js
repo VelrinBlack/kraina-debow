@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html, *, *::before, *::after {
-        box-sizing: border-box
+        box-sizing: border-box;
+        margin: 0;
     }
 
     body, a, button {
