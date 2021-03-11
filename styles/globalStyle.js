@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
     body, a, button {
         font-family: 'Montserrat', sans-serif;
     }
+
+    input, textarea, button, select, a {
+        -webkit-tap-highlight-color: transparent;
+    }
 `;
 
 export default GlobalStyle;

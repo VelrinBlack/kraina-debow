@@ -1,14 +1,14 @@
 import StyledWrapper from './Navbar.styles';
-import NavbarLink from 'components/atoms/NavbarLink/NavbarLink';
+import NavigationLink from 'components/atoms/NavigationLink/NavigationLink';
 import PropTypes from 'prop-types';
 
 const Navbar = ({ isCentered = false }) => (
   <StyledWrapper className={isCentered && 'centered'}>
     <ul>
-      <NavbarLink name="Strona Główna" location="/" />
-      <NavbarLink name="Blog" location="/blog" />
-      <NavbarLink name="Galeria" location="/galeria" />
-      <NavbarLink name="Kontakt" location="/kontakt" />
+      <NavigationLink name="Strona Główna" location="/" />
+      <NavigationLink name="Blog" location="/blog" />
+      <NavigationLink name="Galeria" location="/galeria" />
+      <NavigationLink name="Kontakt" location="/kontakt" />
     </ul>
   </StyledWrapper>
 );

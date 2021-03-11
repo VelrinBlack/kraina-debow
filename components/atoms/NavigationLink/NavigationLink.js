@@ -1,9 +1,9 @@
-import StyledWrapper from './NavbarLink.styles';
+import StyledWrapper from './NavigationLink.styles';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const NavbarLink = ({ name, location }) => {
+const NavigationLink = ({ name, location }) => {
   const router = useRouter();
 
   const isActive = router?.pathname === location;
@@ -17,9 +17,9 @@ const NavbarLink = ({ name, location }) => {
   );
 };
 
-NavbarLink.propTypes = {
+NavigationLink.propTypes = {
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
 };
 
-export default NavbarLink;
+export default NavigationLink;
