@@ -17,10 +17,11 @@ const StyledWrapper = styled.div`
   font-family: 'Berkshire Swash';
   font-size: 24px;
 
+  @media (max-width: 1280px) {
+    height: 65px;
+  }
   @media (max-width: 500px) {
-    height: clamp(80px, 19vw, 90px);
-    padding: 0 clamp(30px, 10vw, 50px);
-    font-size: clamp(20px, 5vw, 24px);
+    padding: 0 20px;
   }
 `;
 

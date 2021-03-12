@@ -10,8 +10,8 @@ const StyledWrapper = styled.li`
     text-decoration: none;
   }
 
-  @media (max-width: 1024px) {
-    margin: clamp(4px, 0.7vw, 5px) 0;
+  @media (max-width: 1280px) {
+    margin: 6px 0;
   }
 `;
 
