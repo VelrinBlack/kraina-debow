@@ -15,6 +15,7 @@ const StyledWrapper = styled.nav`
   border-bottom-left-radius: 20px;
 
   transition: all 0.5s;
+  z-index: 1;
 
   &.centered {
     right: 50%;

@@ -49,7 +49,7 @@ const Header = ({
       {isHomePage ? (
         <img
           src="/images/scroll.svg"
-          alt="scroll icon"
+          alt="ikona scrollowania"
           className="scroll-icon"
           onClick={() => scrollToRef(scrollRef)}
         />

@@ -23,7 +23,7 @@ const StyledWrapper = styled.div`
 
     outline: none;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
   }
 
   nav {
@@ -36,7 +36,7 @@ const StyledWrapper = styled.div`
     background-color: ${({ theme }) => theme.color.white};
 
     transition: transform 0.3s 0.2s;
-    z-index: 2;
+    z-index: 3;
 
     &.is-open {
       transform: translateX(0);
