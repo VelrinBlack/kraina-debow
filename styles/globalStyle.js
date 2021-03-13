@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
+    html, body, #__next {
+        height: 100%;
+    }
+
     body, a, button {
         font-family: 'Montserrat', sans-serif;
     }

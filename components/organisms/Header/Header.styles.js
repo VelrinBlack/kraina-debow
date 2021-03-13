@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.header`
-  height: clamp(500px, 80vw, 700px);
+  height: ${({ isHomePage }) =>
+    isHomePage ? '100%' : 'clamp(500px, 80vw, 700px)'};
 
   display: flex;
   flex-direction: column;
@@ -32,6 +33,17 @@ const StyledWrapper = styled.header`
       width: 80%;
     }
 
+    &.is-home-page {
+      margin: auto;
+      text-align: center;
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: clamp(36px, 9.5vw, 72px);
+        }
+      }
+    }
+
     h1 {
       font-family: 'Berkshire Swash';
       font-size: clamp(48px, 7vw, 72px);
@@ -53,6 +65,13 @@ const StyledWrapper = styled.header`
         color: { lightGreen, darkGreen },
       },
     }) => `linear-gradient(to right, ${lightGreen}, ${darkGreen})`};
+  }
+
+  .scroll-icon {
+    width: 30px;
+    margin: 0 auto 15px auto;
+
+    cursor: pointer;
   }
 `;
 

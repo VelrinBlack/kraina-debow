@@ -1,4 +1,10 @@
 {
+  "/": {
+    "backgroundImage": "/images/forest.jpg",
+    "title": "W krainie dębów",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "isHomePage": true
+  },
   "/blog": {
     "backgroundImage": "/images/typewriter.jpg",
     "title": "Blog",
