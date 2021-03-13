@@ -15,8 +15,8 @@ const StyledWrapper = styled.section`
 
   .portrait {
     width: 35%;
-    max-width: 550px;
-    height: 700px;
+    max-width: 500px;
+    height: 600px;
 
     object-fit: cover;
     border-radius: 20px;
@@ -83,16 +83,16 @@ const StyledWrapper = styled.section`
     }
 
     h2 {
-      font-size: 48px;
+      font-size: clamp(36px, 5vw, 48px);
       font-family: 'Berkshire Swash';
       font-weight: normal;
     }
 
     p {
-      margin-top: 30px;
+      margin-top: clamp(20px, 3vw, 30px);
       font-size: 16px;
 
-      @media (max-width: 500px) {
+      @media (max-width: 768px) {
         font-size: 14px;
       }
     }

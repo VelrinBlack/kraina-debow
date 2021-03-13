@@ -16,7 +16,7 @@ const Header = ({
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const handleResize = () => {
-    setIsSmallScreen(window.innerWidth < 1280);
+    setIsSmallScreen(window.innerWidth <= 1280);
   };
 
   useEffect(() => {
