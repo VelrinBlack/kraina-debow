@@ -21,7 +21,7 @@ const Page = ({ children }) => {
 };
 
 Page.propTypes = {
-  children: PropTypes.array.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default Page;
