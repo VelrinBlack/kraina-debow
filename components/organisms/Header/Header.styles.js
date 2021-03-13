@@ -24,6 +24,7 @@ const StyledWrapper = styled.header`
     margin-left: 150px;
 
     color: ${({ theme }) => theme.color.white};
+    filter: drop-shadow(0px 0px 5px #000);
 
     @media (max-width: 1280px) {
       width: 60%;
