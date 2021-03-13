@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.nav`
+  position: fixed;
+  right: 0;
+
   width: 550px;
   height: 90px;
 
@@ -14,8 +17,8 @@ const StyledWrapper = styled.nav`
   transition: all 0.5s;
 
   &.centered {
-    margin-left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
 
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 2px 0 8px rgba(0, 0, 0, 25%);

@@ -1,20 +1,31 @@
 import StyledWrapper from './Navbar.styles';
 import NavigationLink from 'components/atoms/NavigationLink/NavigationLink';
-import PropTypes from 'prop-types';
 
-const Navbar = ({ isCentered = false }) => (
-  <StyledWrapper className={isCentered && 'centered'}>
-    <ul>
-      <NavigationLink name="Strona Główna" location="/" />
-      <NavigationLink name="Blog" location="/blog" />
-      <NavigationLink name="Galeria" location="/galeria" />
-      <NavigationLink name="Kontakt" location="/kontakt" />
-    </ul>
-  </StyledWrapper>
-);
+import { useEffect, useState } from 'react';
 
-Navbar.propTypes = {
-  isCentered: PropTypes.bool,
+const Navbar = () => {
+  const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    setCurrentScrollPosition(window.scrollY);
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <StyledWrapper className={currentScrollPosition > 200 && 'centered'}>
+      <ul>
+        <NavigationLink name="Strona Główna" location="/" />
+        <NavigationLink name="Blog" location="/blog" />
+        <NavigationLink name="Galeria" location="/galeria" />
+        <NavigationLink name="Kontakt" location="/kontakt" />
+      </ul>
+    </StyledWrapper>
+  );
 };
 
 export default Navbar;
