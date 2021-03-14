@@ -40,7 +40,7 @@ const StyledWrapper = styled.header`
 
       @media (max-width: 500px) {
         h1 {
-          font-size: clamp(36px, 9.5vw, 72px);
+          font-size: clamp(36px, 9.5vw, 48px);
         }
       }
     }

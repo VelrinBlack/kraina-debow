@@ -1,25 +1,25 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.section`
-  width: 100%;
-  height: fit-content;
-  padding: 100px 0;
+  width: 75%;
+  max-width: 1250px;
+
+  margin: 100px auto;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   @media (max-width: 1280px) {
+    width: 100%;
     flex-direction: column;
   }
 
   .portrait {
-    width: 35%;
-    max-width: 500px;
+    width: 40%;
     height: 600px;
 
-    object-fit: cover;
     border-radius: 20px;
+    object-fit: cover;
 
     @media (max-width: 1280px) {
       height: fit-content;
@@ -37,14 +37,12 @@ const StyledWrapper = styled.section`
   }
 
   .text-container {
-    width: 40%;
-    max-width: 750px;
+    width: 60%;
 
-    padding: 60px 20px;
+    padding: 50px 20px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     background-image: ${({
       theme: {
@@ -54,12 +52,8 @@ const StyledWrapper = styled.section`
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    @media (max-width: 1440px) {
-      width: 45%;
-    }
     @media (max-width: 1280px) {
-      min-width: 100%;
-
+      width: 100%;
       padding: 85px 0 60px 0;
       margin-top: -50px;
 
@@ -83,7 +77,7 @@ const StyledWrapper = styled.section`
     }
 
     h2 {
-      font-size: clamp(36px, 5vw, 48px);
+      font-size: clamp(30px, 6vw, 48px);
       font-family: 'Berkshire Swash';
       font-weight: normal;
     }
