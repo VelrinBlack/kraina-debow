@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
     input, textarea, button, select, a {
         -webkit-tap-highlight-color: transparent;
     }
+    
+    a {
+        color: ${({ theme }) => theme.color.black};
+        text-decoration: none;
+    }
 `;
 
 export default GlobalStyle;

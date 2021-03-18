@@ -4,7 +4,7 @@ const StyledWrapper = styled.section`
   width: 75%;
   max-width: 1250px;
 
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 
   display: flex;
   align-items: center;
@@ -77,7 +77,7 @@ const StyledWrapper = styled.section`
     }
 
     h2 {
-      font-size: clamp(30px, 6vw, 48px);
+      font-size: clamp(36px, 7vw, 48px);
       font-family: 'Berkshire Swash';
       font-weight: normal;
     }
