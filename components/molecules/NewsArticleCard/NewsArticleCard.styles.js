@@ -38,7 +38,7 @@ const StyledWrapper = styled.div`
   }
 
   .title {
-    margin: 15px 20px 15px 20px;
+    margin: 15px 20px;
 
     font-family: 'Berkshire Swash';
     font-weight: normal;

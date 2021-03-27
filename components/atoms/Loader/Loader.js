@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Loader = styled.div`
+const Loader = styled.div.attrs(() => ({ className: 'loader' }))`
   width: 50px;
   height: 50px;
 
