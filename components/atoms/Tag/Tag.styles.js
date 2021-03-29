@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+  width: fit-content;
+
   margin: 5px 7px 0 0;
   padding: 5px 10px;
 

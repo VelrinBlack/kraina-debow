@@ -5,14 +5,18 @@ import { useRouter } from 'next/router';
 import pageData from 'data/pages.json';
 import { useRef } from 'react';
 
-const Page = ({ children }) => {
+const Page = ({ children, headerImage = null }) => {
   const router = useRouter();
   const headerProps = pageData[router.pathname];
   const scrollRef = useRef();
 
   return (
     <>
-      <Header {...headerProps} scrollRef={scrollRef} />
+      <Header
+        backgroundImage={headerImage}
+        {...headerProps}
+        scrollRef={scrollRef}
+      />
       <span ref={scrollRef}></span>
       {children}
       <Footer />
@@ -22,6 +26,7 @@ const Page = ({ children }) => {
 
 Page.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  headerImage: PropTypes.string,
 };
 
 export default Page;

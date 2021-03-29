@@ -62,8 +62,8 @@ const Header = ({
 
 Header.propTypes = {
   backgroundImage: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
   isHomePage: PropTypes.bool,
   scrollRef: PropTypes.object.isRequired,
 };

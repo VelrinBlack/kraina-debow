@@ -140,7 +140,6 @@ const StyledWrapper = styled.div`
     }
 
     .tags-container {
-      width: fit-content;
       margin-top: 15px;
     }
   }
