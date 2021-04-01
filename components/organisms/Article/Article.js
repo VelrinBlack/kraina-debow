@@ -2,10 +2,11 @@ import Tag from 'components/atoms/Tag/Tag';
 import StyledWrapper from './Article.styles';
 import ReactMarkdown from 'react-markdown';
 import PropTypes from 'prop-types';
+import { formatDate } from 'helpers';
 
 const Article = ({ content, createdAt, tags, title }) => (
   <StyledWrapper>
-    <time>12.03.2021</time>
+    <time>{formatDate(createdAt)}</time>
     <h1 className="title">{title}</h1>
     <div className="tags-container">
       {tags.map((tag, id) => (

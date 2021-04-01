@@ -1,13 +1,14 @@
 import StyledWrapper from './BlogArticleCard.styles';
 import PropTypes from 'prop-types';
 import Tag from 'components/atoms/Tag/Tag';
+import { formatDate } from 'helpers';
 
 const BlogArticleCard = ({ image, title, tags, createdAt }) => (
   <StyledWrapper>
     <img src={image.url} alt={image.alt} />
 
     <div className="container">
-      <time dateTime={createdAt}>12.03.2021</time>
+      <time dateTime={createdAt}>{formatDate(createdAt)}</time>
       <h2 className="title">{title}</h2>
       <div className="tags-container">
         {tags.map((content, id) => (
