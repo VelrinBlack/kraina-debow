@@ -46,8 +46,8 @@ const BlogArticlesList = () => {
 
   return (
     <StyledWrapper>
-      {articles.map((articleData) => (
-        <BlogArticleCard {...articleData} key={articleData.id} />
+      {articles.map((article) => (
+        <BlogArticleCard {...article} key={article.id} />
       ))}
       {error && <p className="error">Ups! Coś poszło nie tak</p>}
       {loading && <Loader />}
