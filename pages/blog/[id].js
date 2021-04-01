@@ -21,26 +21,34 @@ ArticlePage.propTypes = {
 };
 
 export const getServerSideProps = async (context) => {
-  const { data } = await client.query({
-    query: gql`
-    {
-      article(filter: { id: { eq: ${context.params.id} } }) {
-        image {
-          url
-          alt
+  const res = await client
+    .query({
+      query: gql`
+      {
+        article(filter: { id: { eq: ${context.params.id} } }) {
+          image {
+            url
+            alt
+          }
+          createdAt
+          title
+          tags
+          content
         }
-        createdAt
-        title
-        tags
-        content
       }
-    }
     `,
-  });
+    })
+    .catch(() => {});
+
+  if (!res?.data?.article) {
+    context.res.setHeader('Location', '/404');
+    context.res.statusCode = 302;
+    context.res.end();
+  }
 
   return {
     props: {
-      articleData: data.article,
+      articleData: res.data.article,
     },
   };
 };
