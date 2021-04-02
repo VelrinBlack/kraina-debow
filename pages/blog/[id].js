@@ -3,10 +3,12 @@ import client from 'apolloClient';
 import Page from 'components/templates/Page/Page';
 import Article from 'components/organisms/Article/Article';
 import PropTypes from 'prop-types';
+import Comments from 'components/organisms/Comments/Comments';
 
 const ArticlePage = ({ articleData }) => (
   <Page headerImage={articleData.image.url}>
     <Article {...articleData} />
+    <Comments title={articleData.title} />
   </Page>
 );
 
