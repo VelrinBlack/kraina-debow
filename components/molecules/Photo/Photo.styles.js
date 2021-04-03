@@ -7,7 +7,9 @@ const StyledWrapper = styled.div`
     margin: 10px;
 
     border-radius: 10px;
+
     object-fit: cover;
+    cursor: pointer;
 
     @media (max-width: 786px) {
       width: 200px;
@@ -33,7 +35,9 @@ const StyledWrapper = styled.div`
     align-items: center;
 
     background-color: rgba(0, 0, 0, 50%);
+
     z-index: 1;
+    cursor: pointer;
 
     img {
       width: auto;
