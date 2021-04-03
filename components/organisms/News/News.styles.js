@@ -6,6 +6,9 @@ const StyledWrapper = styled.section`
 
   margin: 150px auto;
 
+  @media (max-width: 1280px) {
+    margin: 100px auto;
+  }
   @media (max-width: 500px) {
     width: 90%;
   }

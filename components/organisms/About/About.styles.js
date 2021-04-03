@@ -11,6 +11,7 @@ const StyledWrapper = styled.section`
 
   @media (max-width: 1280px) {
     width: 100%;
+    margin-top: 70px;
     flex-direction: column;
   }
 
