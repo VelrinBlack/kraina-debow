@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.footer`
-  height: 90px;
+  min-height: 90px;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@ const StyledWrapper = styled.footer`
   color: ${({ theme }) => theme.color.white};
 
   @media (max-width: 1280px) {
-    height: clamp(60px, 7vw, 90px);
+    min-height: clamp(60px, 7vw, 90px);
   }
 
   span {

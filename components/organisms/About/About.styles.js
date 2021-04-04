@@ -4,14 +4,14 @@ const StyledWrapper = styled.section`
   width: 75%;
   max-width: 1250px;
 
-  margin: 100px auto 0 auto;
+  margin: 140px auto 0 auto;
 
   display: flex;
   align-items: center;
 
   @media (max-width: 1280px) {
     width: 100%;
-    margin-top: 70px;
+    margin-top: 80px;
     flex-direction: column;
   }
 

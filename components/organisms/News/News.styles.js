@@ -4,10 +4,10 @@ const StyledWrapper = styled.section`
   width: 75%;
   max-width: 1250px;
 
-  margin: 150px auto;
+  margin: 140px auto;
 
   @media (max-width: 1280px) {
-    margin: 100px auto;
+    margin: 80px auto;
   }
   @media (max-width: 500px) {
     width: 90%;

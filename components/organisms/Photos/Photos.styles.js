@@ -36,11 +36,12 @@ const StyledWrapper = styled.main`
   }
 
   .error {
+    margin: 100px 0;
     text-align: center;
   }
 
   .loader {
-    margin: auto;
+    margin: 100px auto;
   }
 `;
 

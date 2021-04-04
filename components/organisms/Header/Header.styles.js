@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.header`
-  height: ${({ isHomePage }) =>
+  position: relative;
+
+  min-height: ${({ isHomePage }) =>
     isHomePage ? '100%' : 'clamp(500px, 80vw, 700px)'};
 
   display: flex;
@@ -73,6 +75,11 @@ const StyledWrapper = styled.header`
     margin: 0 auto 15px auto;
 
     cursor: pointer;
+  }
+
+  .scroll-ref {
+    position: absolute;
+    bottom: 0;
   }
 `;
 

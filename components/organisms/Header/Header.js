@@ -2,7 +2,7 @@ import StyledWrapper from './Header.styles';
 import Logo from 'components/molecules/Logo/Logo';
 import Navbar from 'components/molecules/Navbar/Navbar';
 import PropTypes from 'prop-types';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import HamburgerMenu from 'components/molecules/HamburgerMenu/HamburgerMenu';
 import { scrollToRef } from 'helpers';
 
@@ -11,9 +11,9 @@ const Header = ({
   title,
   description,
   isHomePage = false,
-  scrollRef,
 }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const scrollRef = useRef();
 
   const handleResize = () => {
     setIsSmallScreen(window.innerWidth <= 1280);
@@ -56,6 +56,8 @@ const Header = ({
       ) : (
         <div className="gradient-line"></div>
       )}
+
+      <span ref={scrollRef} className="scroll-ref"></span>
     </StyledWrapper>
   );
 };
@@ -65,7 +67,6 @@ Header.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   isHomePage: PropTypes.bool,
-  scrollRef: PropTypes.object.isRequired,
 };
 
 export default Header;
