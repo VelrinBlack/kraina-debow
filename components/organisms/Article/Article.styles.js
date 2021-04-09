@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledWrapper = styled.article`
   width: 75%;
-  max-width: 1250px;
+  max-width: 950px;
 
   margin: 50px auto;
 
@@ -36,7 +36,8 @@ const StyledWrapper = styled.article`
     font-weight: normal;
 
     @media (max-width: 1024px) {
-      font-size: clamp(36px, 6vw, 60px);
+      margin-top: 15px;
+      font-size: clamp(30px, 6vw, 60px);
     }
   }
 
@@ -55,7 +56,15 @@ const StyledWrapper = styled.article`
   }
 
   .content {
-    margin-top: 20px;
+    margin-top: 60px;
+
+    @media (max-width: 1024px) {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 30px;
+    }
 
     h2 {
       margin-bottom: 30px;
