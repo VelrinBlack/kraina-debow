@@ -1,8 +1,15 @@
 import StyledWrapper from './Logo.styles';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 const Logo = ({ hasBackground = false }) => (
-  <StyledWrapper hasBackground={hasBackground}>W krainie dębów</StyledWrapper>
+  <Link href="/">
+    <a>
+      <StyledWrapper hasBackground={hasBackground}>
+        W krainie dębów
+      </StyledWrapper>
+    </a>
+  </Link>
 );
 
 Logo.propTypes = {

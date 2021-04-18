@@ -6,7 +6,11 @@ import { useRouter } from 'next/router';
 const NavigationLink = ({ name, location }) => {
   const router = useRouter();
 
-  const isActive = router?.pathname === location;
+  let isActive = router?.pathname === location;
+
+  if (router?.pathname === '/blog/[id]' && location === '/blog') {
+    isActive = true;
+  }
 
   return (
     <StyledWrapper isActive={isActive}>
