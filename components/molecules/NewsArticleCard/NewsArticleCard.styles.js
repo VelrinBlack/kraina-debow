@@ -40,9 +40,8 @@ const StyledWrapper = styled.div`
   .title {
     margin: 15px 20px;
 
-    font-family: 'Berkshire Swash';
-    font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 27px;
   }
 
   .tags-container {
