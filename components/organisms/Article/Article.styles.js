@@ -78,6 +78,14 @@ const StyledWrapper = styled.article`
       font-weight: normal;
       font-size: 24px;
     }
+
+    img {
+      width: 100%;
+      max-height: 500px;
+      margin-top: 25px;
+
+      object-fit: cover;
+    }
   }
 `;
 
