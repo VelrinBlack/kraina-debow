@@ -1,6 +1,6 @@
-import StyledWrapper from './Logo.styles';
-import PropTypes from 'prop-types';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
+import StyledWrapper from './Logo.styles';
 
 const Logo = ({ hasBackground = false }) => (
   <Link href="/">

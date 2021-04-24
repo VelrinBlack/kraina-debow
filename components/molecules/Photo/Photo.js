@@ -1,16 +1,19 @@
 import { useState } from 'react';
-import StyledWrapper from './Photo.styles';
 import PropTypes from 'prop-types';
+import StyledWrapper from './Photo.styles';
 
 const Photo = ({ photoData: { url, alt } }) => {
-  const [active, setActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <StyledWrapper>
-      <img src={url} alt={alt} onClick={() => setActive(true)} />
+      <img src={url} alt={alt} onClick={() => setIsActive(true)} />
 
-      {active && (
-        <div className="active-container" onClick={() => setActive(false)}>
+      {isActive && (
+        <div
+          className="active-photo-container"
+          onClick={() => setIsActive(false)}
+        >
           <img src={url} alt={alt} />
         </div>
       )}

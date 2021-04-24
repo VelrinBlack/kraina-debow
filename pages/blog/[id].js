@@ -1,8 +1,8 @@
+import PropTypes from 'prop-types';
 import { gql } from '@apollo/client';
 import client from 'apolloClient';
 import Page from 'components/templates/Page/Page';
 import Article from 'components/organisms/Article/Article';
-import PropTypes from 'prop-types';
 import Comments from 'components/organisms/Comments/Comments';
 
 const ArticlePage = ({ articleData }) => (
@@ -14,11 +14,11 @@ const ArticlePage = ({ articleData }) => (
 
 ArticlePage.propTypes = {
   articleData: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-    createdAt: PropTypes.string.isRequired,
     image: PropTypes.object.isRequired,
-    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    createdAt: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    content: PropTypes.string.isRequired,
   }),
 };
 
@@ -43,6 +43,7 @@ export const getServerSideProps = async (context) => {
     .catch(() => {});
 
   if (!res?.data?.article) {
+    // redirect to 404 page
     context.res.setHeader('Location', '/404');
     context.res.statusCode = 302;
     context.res.end();

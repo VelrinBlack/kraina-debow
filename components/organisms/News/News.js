@@ -1,9 +1,9 @@
-import NewsArticleCard from 'components/molecules/NewsArticleCard/NewsArticleCard';
-import StyledWrapper from './News.styles';
 import { gql, useQuery } from '@apollo/client';
+import NewsArticleCard from 'components/molecules/NewsArticleCard/NewsArticleCard';
 import Loader from 'components/atoms/Loader/Loader';
+import StyledWrapper from './News.styles';
 
-const newsQuery = gql`
+const query = gql`
   {
     allArticles(first: 3) {
       id
@@ -18,7 +18,7 @@ const newsQuery = gql`
 `;
 
 const News = () => {
-  const { loading, error, data } = useQuery(newsQuery);
+  const { loading, error, data } = useQuery(query);
 
   return (
     <StyledWrapper>

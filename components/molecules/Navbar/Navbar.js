@@ -1,7 +1,6 @@
-import StyledWrapper from './Navbar.styles';
-import NavigationLink from 'components/atoms/NavigationLink/NavigationLink';
-
 import { useEffect, useState } from 'react';
+import NavigationLink from 'components/atoms/NavigationLink/NavigationLink';
+import StyledWrapper from './Navbar.styles';
 
 const Navbar = () => {
   const [currentScrollPosition, setCurrentScrollPosition] = useState(0);
@@ -19,10 +18,10 @@ const Navbar = () => {
   return (
     <StyledWrapper className={currentScrollPosition > 200 && 'centered'}>
       <ul>
-        <NavigationLink name="Strona Główna" location="/" />
-        <NavigationLink name="Blog" location="/blog" />
-        <NavigationLink name="Galeria" location="/galeria" />
-        <NavigationLink name="Kontakt" location="/kontakt" />
+        <NavigationLink text="Strona Główna" destination="/" />
+        <NavigationLink text="Blog" destination="/blog" />
+        <NavigationLink text="Galeria" destination="/galeria" />
+        <NavigationLink text="Kontakt" destination="/kontakt" />
       </ul>
     </StyledWrapper>
   );

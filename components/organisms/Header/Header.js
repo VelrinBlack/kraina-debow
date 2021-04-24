@@ -1,10 +1,10 @@
-import StyledWrapper from './Header.styles';
+import { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import { scrollToRef } from 'helpers';
 import Logo from 'components/molecules/Logo/Logo';
 import Navbar from 'components/molecules/Navbar/Navbar';
-import PropTypes from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
 import HamburgerMenu from 'components/molecules/HamburgerMenu/HamburgerMenu';
-import { scrollToRef } from 'helpers';
+import StyledWrapper from './Header.styles';
 
 const Header = ({
   backgroundImage,
@@ -49,7 +49,7 @@ const Header = ({
       {isHomePage ? (
         <img
           src="/images/scroll.svg"
-          alt="ikona scrollowania"
+          alt="przewiń dalej"
           className="scroll-icon"
           onClick={() => scrollToRef(scrollRef)}
         />

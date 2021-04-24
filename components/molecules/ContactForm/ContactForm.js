@@ -1,9 +1,9 @@
-import StyledWrapper from './ContactForm.styles';
-import { useForm } from 'react-hook-form';
-import isEmail from 'validator/lib/isEmail';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import isEmail from 'validator/lib/isEmail';
 import EmailSentPopup from 'components/molecules/EmailSentPopup/EmailSentPopup';
+import StyledWrapper from './ContactForm.styles';
 
 const emailApiUrl = process.env.EMAIL_API_URL;
 
@@ -15,19 +15,19 @@ const ContactForm = () => {
     reset,
   } = useForm();
 
-  const [popupActive, setPopupActive] = useState(false);
+  const [isPopupActive, setIsPopupActive] = useState(false);
 
   useEffect(() => {
-    if (popupActive) {
+    if (isPopupActive) {
       setTimeout(() => {
-        setPopupActive(false);
+        setIsPopupActive(false);
       }, 3000);
     }
-  }, [popupActive]);
+  }, [isPopupActive]);
 
   const onSubmit = (data) => {
     reset();
-    setPopupActive(true);
+    setIsPopupActive(true);
     axios.post(emailApiUrl, data);
   };
 
@@ -45,7 +45,7 @@ const ContactForm = () => {
         <textarea
           placeholder="Wiadomość"
           {...register('message', { required: true })}
-        ></textarea>
+        />
       </div>
 
       <div className="bottom-container">
@@ -60,7 +60,9 @@ const ContactForm = () => {
         <input type="submit" value="Wyślij" className="submit" />
       </div>
 
-      {popupActive && <EmailSentPopup close={() => setPopupActive(false)} />}
+      {isPopupActive && (
+        <EmailSentPopup close={() => setIsPopupActive(false)} />
+      )}
     </StyledWrapper>
   );
 };

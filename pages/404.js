@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   height: 100%;
 
   display: flex;
@@ -32,10 +32,10 @@ const Wrapper = styled.div`
 `;
 
 const ErrorPage = () => (
-  <Wrapper>
-    <img src="/images/not_found.svg" alt="not found" />
+  <StyledWrapper>
+    <img src="/images/not_found.svg" alt="nie znaleziono" />
     <h1>Tu jest pusto! 😮</h1>
-  </Wrapper>
+  </StyledWrapper>
 );
 
 export default ErrorPage;

@@ -1,10 +1,10 @@
-import StyledWrapper from './Comments.styles';
-import { DiscussionEmbed } from 'disqus-react';
-import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
-import unidecode from 'unidecode';
-import absoluteUrl from 'next-absolute-url';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { DiscussionEmbed } from 'disqus-react';
+import unidecode from 'unidecode';
+import PropTypes from 'prop-types';
+import absoluteUrl from 'next-absolute-url';
+import StyledWrapper from './Comments.styles';
 
 const Comments = ({ title }) => {
   const router = useRouter();

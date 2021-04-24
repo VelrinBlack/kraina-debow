@@ -1,28 +1,27 @@
-import { gql, useLazyQuery } from '@apollo/client';
-import Loader from 'components/atoms/Loader/Loader';
-import Photo from 'components/molecules/Photo/Photo';
 import { useEffect, useState } from 'react';
+import { gql, useLazyQuery } from '@apollo/client';
+import Photo from 'components/molecules/Photo/Photo';
+import Loader from 'components/atoms/Loader/Loader';
 import StyledWrapper from './Photos.styles';
+
+const query = gql`
+  query Photos($photosLength: IntType) {
+    allPhotos(first: 3, skip: $photosLength) {
+      photo {
+        id
+        url
+        alt
+      }
+    }
+  }
+`;
 
 const Photos = () => {
   const [photos, setPhotos] = useState([]);
 
-  const [fetchPhotos, { loading, error, data }] = useLazyQuery(
-    gql`
-      query Photos($photosLength: IntType) {
-        allPhotos(first: 3, skip: $photosLength) {
-          photo {
-            id
-            url
-            alt
-          }
-        }
-      }
-    `,
-    {
-      variables: { photosLength: 0 },
-    }
-  );
+  const [fetchPhotos, { loading, error, data }] = useLazyQuery(query, {
+    variables: { photosLength: 0 },
+  });
 
   useEffect(() => {
     fetchPhotos();
@@ -43,7 +42,7 @@ const Photos = () => {
 
   return (
     <StyledWrapper>
-      <div className="flex-container">
+      <div className="container">
         {photos.map(({ photo }, id) => (
           <Photo photoData={photo} key={id} />
         ))}

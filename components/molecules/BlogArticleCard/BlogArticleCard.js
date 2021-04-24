@@ -1,8 +1,8 @@
-import StyledWrapper from './BlogArticleCard.styles';
-import PropTypes from 'prop-types';
-import Tag from 'components/atoms/Tag/Tag';
-import { formatDate } from 'helpers';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
+import { formatDate } from 'helpers';
+import Tag from 'components/atoms/Tag/Tag';
+import StyledWrapper from './BlogArticleCard.styles';
 
 const BlogArticleCard = ({ image, title, tags, createdAt, id }) => (
   <Link href={`/blog/${id}`}>
@@ -11,11 +11,13 @@ const BlogArticleCard = ({ image, title, tags, createdAt, id }) => (
         <img src={image.url} alt={image.alt} />
 
         <div className="container">
-          <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+          <time dateTime={createdAt} className="date-created">
+            {formatDate(createdAt)}
+          </time>
           <h2 className="title">{title}</h2>
           <div className="tags-container">
-            {tags.map((content, id) => (
-              <Tag content={content} key={id} />
+            {tags.map((text, id) => (
+              <Tag key={id}>{text}</Tag>
             ))}
           </div>
         </div>
@@ -32,6 +34,7 @@ BlogArticleCard.propTypes = {
   title: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   createdAt: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default BlogArticleCard;

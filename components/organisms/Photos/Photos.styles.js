@@ -16,7 +16,7 @@ const StyledWrapper = styled.main`
     margin: 30px auto;
   }
 
-  .flex-container {
+  .container {
     margin-bottom: 70px;
 
     display: flex;

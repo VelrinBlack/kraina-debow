@@ -1,29 +1,29 @@
-import StyledWrapper from './NavigationLink.styles';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import StyledWrapper from './NavigationLink.styles';
 
-const NavigationLink = ({ name, location }) => {
+const NavigationLink = ({ text, destination }) => {
   const router = useRouter();
 
-  let isActive = router?.pathname === location;
+  let isActive = router?.pathname === destination;
 
-  if (router?.pathname === '/blog/[id]' && location === '/blog') {
+  if (router?.pathname === '/blog/[id]' && destination === '/blog') {
     isActive = true;
   }
 
   return (
     <StyledWrapper isActive={isActive}>
-      <Link href={location}>
-        <a>{name}</a>
+      <Link href={destination}>
+        <a>{text}</a>
       </Link>
     </StyledWrapper>
   );
 };
 
 NavigationLink.propTypes = {
-  name: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  destination: PropTypes.string.isRequired,
 };
 
 export default NavigationLink;

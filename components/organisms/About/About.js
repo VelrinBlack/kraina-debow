@@ -2,7 +2,7 @@ import StyledWrapper from './About.styles';
 
 const About = () => (
   <StyledWrapper>
-    <img src="/images/portrait.jpg" alt="mój portret" className="portrait" />
+    <img src="/images/portrait.jpg" alt="mój portret" />
     <div className="text-container">
       <h2>Poznajmy się!</h2>
       <p>

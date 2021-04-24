@@ -15,7 +15,7 @@ const StyledWrapper = styled.section`
     flex-direction: column;
   }
 
-  .portrait {
+  img {
     width: 40%;
     height: 600px;
 

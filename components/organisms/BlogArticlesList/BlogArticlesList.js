@@ -1,31 +1,30 @@
-import StyledWrapper from './BlogArticlesList.styles';
 import { useEffect, useState } from 'react';
-import BlogArticleCard from 'components/molecules/BlogArticleCard/BlogArticleCard';
 import { gql, useLazyQuery } from '@apollo/client';
 import Loader from 'components/atoms/Loader/Loader';
+import BlogArticleCard from 'components/molecules/BlogArticleCard/BlogArticleCard';
+import StyledWrapper from './BlogArticlesList.styles';
+
+const query = gql`
+  query Articles($articlesLength: IntType) {
+    allArticles(first: 3, skip: $articlesLength) {
+      id
+      image {
+        url
+        alt
+      }
+      title
+      tags
+      createdAt
+    }
+  }
+`;
 
 const BlogArticlesList = () => {
   const [articles, setArticles] = useState([]);
 
-  const [fetchArticles, { loading, error, data }] = useLazyQuery(
-    gql`
-      query Articles($articlesLength: IntType) {
-        allArticles(first: 3, skip: $articlesLength) {
-          id
-          image {
-            url
-            alt
-          }
-          title
-          tags
-          createdAt
-        }
-      }
-    `,
-    {
-      variables: { articlesLength: 0 },
-    }
-  );
+  const [fetchArticles, { loading, error, data }] = useLazyQuery(query, {
+    variables: { articlesLength: 0 },
+  });
 
   useEffect(() => {
     fetchArticles();

@@ -55,7 +55,7 @@ const StyledWrapper = styled.div`
       justify-content: flex-end;
     }
 
-    time {
+    .date-created {
       position: absolute;
       top: 0;
       left: 0;
