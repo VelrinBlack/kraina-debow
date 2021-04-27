@@ -1,7 +1,7 @@
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-const token = process.env.API_TOKEN;
+const token = process.env.NEXT_PUBLIC_API_TOKEN;
 
 const httpLink = createHttpLink({
   uri: 'https://graphql.datocms.com/',
