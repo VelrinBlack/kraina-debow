@@ -15,6 +15,7 @@ const App = ({ Component, pageProps }) => (
           href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/images/logo.svg" />
       </Head>
 
       <GlobalStyle />
