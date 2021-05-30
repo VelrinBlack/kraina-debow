@@ -1,19 +1,15 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 import StyledWrapper from './Logo.styles';
 
-const Logo = ({ hasBackground = false }) => (
+const Logo = () => (
   <Link href="/">
     <a>
-      <StyledWrapper hasBackground={hasBackground}>
-        W krainie dębów
+      <StyledWrapper>
+        <img src="/images/logo_secondary.svg" alt="logo" className="logo" />
+        <span className="logo-text">Kraina Dębów</span>
       </StyledWrapper>
     </a>
   </Link>
 );
-
-Logo.propTypes = {
-  hasBackground: PropTypes.bool,
-};
 
 export default Logo;

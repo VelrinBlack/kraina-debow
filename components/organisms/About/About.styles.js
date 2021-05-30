@@ -15,11 +15,11 @@ const StyledWrapper = styled.section`
     flex-direction: column;
   }
 
-  img {
-    width: 40%;
-    height: 600px;
+  .portrait {
+    width: 35%;
+    height: 550px;
 
-    border-radius: 20px;
+    border-radius: 10px;
     object-fit: cover;
 
     @media (max-width: 1280px) {
@@ -38,8 +38,7 @@ const StyledWrapper = styled.section`
   }
 
   .text-container {
-    width: 60%;
-
+    width: 65%;
     padding: 50px 20px;
 
     display: flex;
@@ -50,8 +49,8 @@ const StyledWrapper = styled.section`
         color: { lightGreen, darkGreen },
       },
     }) => `linear-gradient(to right bottom, ${lightGreen}, ${darkGreen})`};
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 
     @media (max-width: 1280px) {
       width: 100%;
@@ -66,7 +65,7 @@ const StyledWrapper = styled.section`
 
     h2,
     p {
-      width: 90%;
+      width: 95%;
       color: ${({ theme }) => theme.color.white};
 
       @media (max-width: 1280px) {
@@ -84,12 +83,8 @@ const StyledWrapper = styled.section`
     }
 
     p {
-      margin-top: clamp(20px, 3vw, 30px);
-      font-size: 16px;
-
-      @media (max-width: 768px) {
-        font-size: 14px;
-      }
+      margin-top: 25px;
+      font-size: 14px;
     }
   }
 `;

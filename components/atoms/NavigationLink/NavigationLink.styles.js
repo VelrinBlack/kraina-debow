@@ -5,13 +5,18 @@ const StyledWrapper = styled.li`
 
   a {
     color: ${({ theme }) => theme.color.white};
-    font-size: 18px;
+    font-size: 16px;
     font-weight: ${({ isActive }) => (isActive ? '700' : '400')};
     text-decoration: none;
   }
 
   @media (max-width: 1280px) {
-    margin: 6px 0;
+    margin: 10px 0;
+    text-align: center;
+
+    a {
+      color: ${({ theme }) => theme.color.black};
+    }
   }
 `;
 

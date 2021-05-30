@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.section`
-  width: 75%;
-  max-width: 1250px;
+  width: 75vw;
+  max-width: 1100px;
 
   margin: 0 auto;
 
-  @media (max-width: 786px) {
+  @media (max-width: 768px) {
     width: 95%;
   }
 

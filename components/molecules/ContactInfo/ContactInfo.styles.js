@@ -10,12 +10,12 @@ const StyledWrapper = styled.div`
   justify-content: center;
 
   background-color: ${({ theme }) => theme.color.grey};
-  border-radius: 20px;
+  border-radius: 10px;
 
   @media (max-width: 1280px) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
-  @media (max-width: 786px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 

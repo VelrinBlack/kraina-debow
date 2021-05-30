@@ -1,24 +1,27 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
+  height: 200px;
+  width: 200px;
+  margin: 2.5px;
+
+  @media (max-width: 768px) {
+    height: 100px;
+    width: 100px;
+    margin: 2px;
+  }
+
   img {
-    width: 280px;
-    height: 280px;
-    margin: 10px;
+    width: 100%;
+    height: 100%;
 
     border-radius: 10px;
 
     object-fit: cover;
     cursor: pointer;
 
-    @media (max-width: 786px) {
-      width: 200px;
-      height: 200px;
-      margin: 5px;
-    }
-    @media (max-width: 500px) {
-      width: 150px;
-      height: 150px;
+    @media (max-width: 768px) {
+      border-radius: 5px;
     }
   }
 
@@ -46,9 +49,6 @@ const StyledWrapper = styled.div`
       max-height: 95%;
 
       @media (max-width: 786px) {
-        max-width: 90%;
-      }
-      @media (max-width: 500px) {
         max-width: 95%;
       }
     }

@@ -4,15 +4,16 @@ const StyledWrapper = styled.nav`
   position: fixed;
   right: 0;
 
-  width: 550px;
-  height: 90px;
+  width: 500px;
+  height: 70px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(0, 0, 0, 65%);
-  border-bottom-left-radius: 20px;
+  background-color: ${({ isHomePage }) =>
+    isHomePage ? 'rgba(0, 0, 0, 75%)' : 'none'};
+  border-bottom-left-radius: 10px;
 
   transition: all 0.5s;
   z-index: 1;
@@ -21,22 +22,17 @@ const StyledWrapper = styled.nav`
     right: 50%;
     transform: translateX(50%);
 
-    background-color: ${({ theme }) => theme.color.white};
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 25%);
-    border-bottom-right-radius: 20px;
-
-    a {
-      color: ${({ theme }) => theme.color.black};
-    }
+    background-color: rgba(0, 0, 0, 75%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 25%);
+    border-bottom-right-radius: 10px;
   }
 
   ul {
-    width: 450px;
+    width: 400px;
     padding: 0;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 `;
 

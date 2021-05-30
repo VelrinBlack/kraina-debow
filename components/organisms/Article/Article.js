@@ -6,7 +6,9 @@ import StyledWrapper from './Article.styles';
 
 const Article = ({ createdAt, title, tags, content }) => (
   <StyledWrapper>
-    <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+    <time dateTime={createdAt} className="date-created">
+      {formatDate(createdAt)}
+    </time>
     <h1 className="title">{title}</h1>
     <div className="tags-container">
       {tags.map((text, id) => (

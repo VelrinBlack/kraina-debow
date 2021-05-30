@@ -6,8 +6,8 @@ const StyledWrapper = styled.div`
   .opening-button {
     position: fixed;
 
-    width: 65px;
-    height: 55px;
+    width: 55px;
+    height: 45px;
 
     background-image: ${({
       theme: {
@@ -19,11 +19,12 @@ const StyledWrapper = styled.div`
     background-position: center;
 
     border: none;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 40%);
 
     outline: none;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
   }
 
   nav {
@@ -46,20 +47,15 @@ const StyledWrapper = styled.div`
         transform: scale(1);
         transition: transform 0.2s 0.3s;
       }
-
-      .link-list {
-        transform: translate(-50%, -50%) scale(1);
-        transition: transform 0.2s 0.3s;
-      }
     }
 
     .closing-button {
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 12px;
+      right: 12px;
 
-      width: 55px;
-      height: 55px;
+      width: 50px;
+      height: 50px;
       transform: scale(0);
 
       background-image: url('/images/cross.svg');
@@ -72,29 +68,16 @@ const StyledWrapper = styled.div`
       transition: transform 0.2s 0s;
     }
 
-    .link-list {
+    .links-list {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%) scale(0);
+      transform: translate(-50%, -50%);
 
-      width: clamp(270px, 50vw, 350px);
-      height: clamp(270px, 50vw, 350px);
       padding: 0;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      background-image: ${({
-        theme: {
-          color: { lightGreen, darkGreen },
-        },
-      }) => `linear-gradient(to right, ${lightGreen}, ${darkGreen})`};
-      border-radius: 100%;
-
-      transition: transform 0.2s 0s;
     }
   }
 `;

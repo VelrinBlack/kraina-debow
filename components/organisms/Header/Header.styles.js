@@ -3,65 +3,63 @@ import styled from 'styled-components';
 const StyledWrapper = styled.header`
   position: relative;
 
-  min-height: ${({ isHomePage }) =>
-    isHomePage ? '100%' : 'clamp(500px, 80vw, 700px)'};
+  flex-shrink: 0;
+  height: ${({ isHomePage }) => (isHomePage ? '100%' : '40vw')};
+  min-height: 570px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-size: cover;
-  background-position: center;
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    filter: ${({ isHomePage }) => (!isHomePage ? 'brightness(0.7)' : 'none')};
+    object-fit: cover;
+
+    z-index: -1;
+  }
 
   .top-bar {
-    width: 100%;
-
     display: flex;
     justify-content: space-between;
   }
 
   .text-container {
-    width: 45%;
-    margin-left: 150px;
+    width: 800px;
+    margin-left: 100px;
 
     color: ${({ theme }) => theme.color.white};
-    filter: drop-shadow(0px 0px 5px #000);
-
-    @media (max-width: 1280px) {
-      width: 60%;
-      margin-left: clamp(25px, 5vw, 70px);
-    }
-    @media (max-width: 1024px) {
-      width: 80%;
-    }
 
     &.is-home-page {
       margin: auto;
       text-align: center;
-
-      @media (max-width: 500px) {
-        h1 {
-          font-size: clamp(36px, 9.5vw, 48px);
-        }
-      }
     }
 
-    h1 {
+    @media (max-width: 1024px) {
+      width: auto;
+      margin: 0 50px;
+    }
+    @media (max-width: 768px) {
+      margin: 0 15px;
+    }
+
+    .title {
       font-family: 'Berkshire Swash';
       font-size: clamp(48px, 7vw, 72px);
       font-weight: normal;
     }
 
-    p {
-      margin-top: 20px;
-      font-size: clamp(14px, 2vw, 18px);
+    .description {
+      margin-top: 15px;
+      font-size: clamp(14px, 2vw, 16px);
     }
   }
 
   .gradient-line {
-    width: 100%;
-    height: 13px;
+    height: clamp(6px, 0.5vw, 10px);
 
     background-image: ${({
       theme: {
@@ -71,10 +69,18 @@ const StyledWrapper = styled.header`
   }
 
   .scroll-icon {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 30px;
-    margin: 0 auto 15px auto;
 
     cursor: pointer;
+
+    @media (max-width: 1024px) {
+      width: 25px;
+    }
   }
 
   .scroll-ref {

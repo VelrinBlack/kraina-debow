@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.article`
-  width: 75%;
-  max-width: 950px;
+  width: 75vw;
+  max-width: 850px;
 
   margin: 50px auto;
 
@@ -14,30 +14,33 @@ const StyledWrapper = styled.article`
     width: 95%;
   }
 
-  time {
-    padding: 2px 8px;
+  .date-created {
+    width: fit-content;
+    height: 20px;
+    padding: 0 8px;
+
+    display: flex;
+    align-items: center;
 
     background-color: ${({ theme }) => theme.color.lightGreen};
-    border-radius: 2px;
+    border-radius: 3px;
 
-    font-size: 14px;
     color: ${({ theme }) => theme.color.white};
-
-    @media (max-width: 1024px) {
-      font-size: 12px;
-    }
+    font-size: 12px;
   }
 
   .title {
     margin-top: 20px;
 
-    font-size: 60px;
+    font-size: 48px;
     font-family: 'Berkshire Swash';
     font-weight: normal;
 
     @media (max-width: 1024px) {
-      margin-top: 15px;
-      font-size: clamp(30px, 6vw, 60px);
+      font-size: 36px;
+    }
+    @media (max-width: 500px) {
+      font-size: 30px;
     }
   }
 
@@ -45,44 +48,37 @@ const StyledWrapper = styled.article`
     margin-top: 20px;
 
     @media (max-width: 1024px) {
-      margin-top: 15px;
-
-      .tag {
-        padding: 4px 8px;
-        font-size: 12px;
-        border-radius: 6px;
-      }
+      margin-top: 10px;
     }
   }
 
   .content {
-    margin-top: 60px;
+    margin-top: 50px;
 
-    @media (max-width: 1024px) {
-      margin-top: 40px;
-    }
-
-    @media (max-width: 500px) {
+    h2,
+    h3,
+    h4 {
       margin-top: 30px;
-    }
-
-    h2 {
-      margin-bottom: 30px;
       font-size: 18px;
       font-weight: 600;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
-    h3 {
-      margin: 25px 0 10px 0;
-      font-family: 'Berkshire Swash';
-      font-weight: normal;
-      font-size: 24px;
+    p {
+      margin-top: 15px;
+      line-height: 23px;
+
+      strong {
+        font-weight: 600;
+      }
     }
 
     img {
       width: 100%;
-      max-height: 500px;
-      margin-top: 25px;
+      max-height: 550px;
 
       object-fit: cover;
     }

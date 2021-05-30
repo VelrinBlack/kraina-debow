@@ -4,10 +4,10 @@ const StyledWrapper = styled.section`
   width: 75%;
   max-width: 1250px;
 
-  margin: 140px auto;
+  margin: 150px auto;
 
   @media (max-width: 1280px) {
-    margin: 80px auto;
+    margin: 100px auto;
   }
   @media (max-width: 500px) {
     width: 90%;
@@ -17,14 +17,14 @@ const StyledWrapper = styled.section`
     width: fit-content;
     margin: 0 auto;
 
-    font-size: clamp(36px, 6vw, 48px);
+    font-size: clamp(36px, 7vw, 48px);
     font-family: 'Berkshire Swash';
     font-weight: normal;
 
     .underline {
-      width: 50%;
-      height: 5px;
-      margin: 3px auto 0 auto;
+      width: 40%;
+      height: 4px;
+      margin: 4px auto 0 auto;
 
       background-color: ${({ theme }) => theme.color.lightGreen};
     }
@@ -36,6 +36,9 @@ const StyledWrapper = styled.section`
 
     @media (max-width: 1280px) {
       flex-direction: column;
+    }
+    @media (max-width: 500px) {
+      margin-top: 50px;
     }
   }
 

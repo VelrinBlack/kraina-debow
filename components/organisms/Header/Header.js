@@ -26,7 +26,8 @@ const Header = ({
   }, []);
 
   return (
-    <StyledWrapper backgroundImage={backgroundImage} isHomePage={isHomePage}>
+    <StyledWrapper isHomePage={isHomePage}>
+      <img src={backgroundImage} className="background" />
       <div className="top-bar">
         {isSmallScreen ? (
           <>
@@ -35,15 +36,15 @@ const Header = ({
           </>
         ) : (
           <>
-            {!isHomePage && <Logo hasBackground />}
-            <Navbar />
+            {!isHomePage && <Logo />}
+            <Navbar isHomePage={isHomePage} />
           </>
         )}
       </div>
 
       <div className={`text-container ${isHomePage && 'is-home-page'}`}>
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1 className="title">{title}</h1>
+        <p className="description">{description}</p>
       </div>
 
       {isHomePage ? (

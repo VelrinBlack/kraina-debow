@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
           onClick={() => setIsOpen(false)}
         ></button>
 
-        <ul className="link-list">
+        <ul className="links-list">
           <NavigationLink text="Strona Główna" destination="/" />
           <NavigationLink text="Blog" destination="/blog" />
           <NavigationLink text="Galeria" destination="/galeria" />

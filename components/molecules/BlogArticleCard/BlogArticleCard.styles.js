@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledWrapper = styled.div`
   position: relative;
   height: 240px;
-  margin: 50px 0;
+  margin: 40px 0;
 
   display: flex;
 
@@ -17,22 +17,20 @@ const StyledWrapper = styled.div`
   }
 
   img {
-    width: 30%;
-    min-width: 30%;
-    max-width: 30%;
-    height: 100%;
-
-    border-radius: 20px;
+    width: 35%;
+    border-radius: 10px;
 
     object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
 
     @media (max-width: 1280px) {
       position: absolute;
 
       width: 100%;
-      min-width: 100%;
-      max-width: 100%;
       height: 100%;
+
+      filter: brightness(0.6);
+      box-shadow: none;
     }
   }
 
@@ -58,7 +56,6 @@ const StyledWrapper = styled.div`
     .date-created {
       position: absolute;
       top: 0;
-      left: 0;
 
       height: 20px;
       padding-right: 8px;
@@ -68,8 +65,8 @@ const StyledWrapper = styled.div`
       align-items: center;
 
       background-color: ${({ theme }) => theme.color.lightGreen};
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
 
       color: ${({ theme }) => theme.color.white};
       font-size: 12px;
@@ -79,22 +76,18 @@ const StyledWrapper = styled.div`
         left: 50%;
         transform: translateX(-50%);
 
-        width: 60%;
+        width: 70%;
         height: 24px;
         padding: 0;
 
         border-radius: 0;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
       }
 
-      @media (max-width: 786px) {
+      @media (max-width: 768px) {
         width: 100%;
-        height: 40px;
-        margin-top: -16px;
-        padding-bottom: 5px;
-
-        align-items: flex-end;
+        box-shadow: 0 -10px 0 ${({ theme }) => theme.color.lightGreen};
 
         z-index: -1;
       }
@@ -106,7 +99,7 @@ const StyledWrapper = styled.div`
         right: 100%;
 
         height: 100%;
-        width: 200px;
+        width: 100px;
 
         background-color: ${({ theme }) => theme.color.lightGreen};
         z-index: -1;
@@ -121,21 +114,17 @@ const StyledWrapper = styled.div`
       font-size: 20px;
 
       @media (max-width: 1280px) {
-        width: 50%;
-
+        width: 60%;
         color: ${({ theme }) => theme.color.white};
-        font-size: 24px;
-
-        filter: drop-shadow(0 3px 5px #000);
       }
 
       @media (max-width: 1024px) {
-        width: 70%;
+        width: 75%;
       }
 
-      @media (max-width: 786px) {
+      @media (max-width: 768px) {
         width: 90%;
-        font-size: 20px;
+        font-size: 18px;
       }
     }
 

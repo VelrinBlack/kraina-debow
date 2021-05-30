@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
     html, *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
+        -webkit-tap-highlight-color: transparent;
     }
 
     html, body, #__next {
@@ -13,14 +14,11 @@ const GlobalStyle = createGlobalStyle`
     body, a, button {
         font-family: 'Montserrat', sans-serif;
     }
-
-    input, textarea, button, select, a {
-        -webkit-tap-highlight-color: transparent;
-    }
     
     a {
         color: ${({ theme }) => theme.color.black};
         text-decoration: none;
+        
     }
 `;
 

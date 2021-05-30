@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.form`
-  width: 100%;
   flex: 1;
+  width: 100%;
   margin-left: 15px;
 
   @media (max-width: 1280px) {
@@ -16,8 +16,8 @@ const StyledWrapper = styled.form`
     flex-direction: column;
 
     * {
-      border: ${({ theme }) => `2px solid ${theme.color.lightGreen}`};
-      border-radius: 10px;
+      border: ${({ theme }) => `1px solid ${theme.color.lightGreen}`};
+      border-radius: 6px;
       outline: none;
 
       font-family: 'Montserrat';
@@ -35,7 +35,7 @@ const StyledWrapper = styled.form`
 
     textarea {
       flex: 1;
-      padding: 10px 10px;
+      padding: 10px;
       resize: none;
     }
   }
@@ -50,6 +50,10 @@ const StyledWrapper = styled.form`
     .error {
       font-size: 14px;
       color: red;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     .submit {
@@ -58,7 +62,7 @@ const StyledWrapper = styled.form`
       background-image: ${({ theme: { color } }) =>
         `linear-gradient(to right, ${color.lightGreen}, ${color.darkGreen})`};
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
 
       font-family: 'Berkshire Swash';
       font-size: 18px;

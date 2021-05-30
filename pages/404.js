@@ -1,41 +1,21 @@
 import styled from 'styled-components';
 
-const StyledWrapper = styled.div`
-  height: 100%;
+const StyledHeading = styled.h1`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 
-  img {
-    width: clamp(250px, 50vw, 600px);
-  }
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
 
-  h1 {
-    margin-top: 50px;
-    font-size: 48px;
-    font-weight: 400;
-
-    @media (max-width: 1280px) {
-      font-size: 36px;
-      margin-top: 40px;
-    }
-    @media (max-width: 786px) {
-      font-size: 30px;
-      margin-top: 30px;
-    }
-    @media (max-width: 500px) {
-      font-size: 24px;
-    }
+  @media (max-width: 768px) {
+    font-size: 24px;
   }
 `;
 
-const ErrorPage = () => (
-  <StyledWrapper>
-    <img src="/images/not_found.svg" alt="nie znaleziono" />
-    <h1>Tu jest pusto! 😮</h1>
-  </StyledWrapper>
-);
+const ErrorPage = () => <StyledHeading>Nie znaleziono</StyledHeading>;
 
 export default ErrorPage;
