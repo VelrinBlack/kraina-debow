@@ -74,6 +74,11 @@ const StyledWrapper = styled.article`
       strong {
         font-weight: 600;
       }
+
+      a {
+        color: ${({ theme }) => theme.color.lightGreen};
+        text-decoration: underline;
+      }
     }
 
     img {
