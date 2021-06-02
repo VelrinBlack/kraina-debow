@@ -25,6 +25,8 @@ const StyledWrapper = styled.header`
   .top-bar {
     display: flex;
     justify-content: space-between;
+
+    z-index: 0;
   }
 
   .text-container {
@@ -32,6 +34,8 @@ const StyledWrapper = styled.header`
     margin-left: 100px;
 
     color: ${({ theme }) => theme.color.white};
+
+    z-index: 0;
 
     &.is-home-page {
       margin: auto;
