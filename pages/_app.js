@@ -10,6 +10,7 @@ const App = ({ Component, pageProps }) => (
   <ApolloProvider client={apolloClient}>
     <ThemeProvider theme={theme}>
       <Head>
+        <title>Kraina Dębów</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;600;700&display=swap"
