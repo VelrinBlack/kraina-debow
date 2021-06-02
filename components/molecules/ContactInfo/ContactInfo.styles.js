@@ -19,17 +19,16 @@ const StyledWrapper = styled.div`
     width: 100%;
   }
 
-  img {
+  .portrait {
     width: 100px;
     height: 100px;
-    margin-bottom: 10px;
 
     border-radius: 100%;
     object-fit: cover;
   }
 
   .name {
-    margin-bottom: 25px;
+    margin: 10px 0 25px 0;
 
     font-size: 18px;
     font-weight: bold;

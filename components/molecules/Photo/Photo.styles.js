@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-  height: 200px;
+  position: relative;
   width: 200px;
+  height: 200px;
   margin: 2.5px;
 
   @media (max-width: 768px) {
@@ -25,7 +26,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  .active-photo-container {
+  .active-photo-shadow {
     position: fixed;
     top: 0;
     left: 0;
@@ -42,14 +43,17 @@ const StyledWrapper = styled.div`
     z-index: 1;
     cursor: pointer;
 
-    img {
-      width: auto;
-      height: auto;
-      max-width: 80%;
-      max-height: 95%;
+    .active-photo-container {
+      position: relative;
+      width: 80%;
+      height: 95%;
 
       @media (max-width: 786px) {
-        max-width: 95%;
+        width: 95%;
+      }
+
+      img {
+        object-fit: contain;
       }
     }
   }

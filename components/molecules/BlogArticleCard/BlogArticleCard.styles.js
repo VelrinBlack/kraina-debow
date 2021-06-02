@@ -16,11 +16,11 @@ const StyledWrapper = styled.div`
     margin: 50px 0;
   }
 
-  img {
+  .image-container {
+    position: relative;
     width: 35%;
-    border-radius: 10px;
 
-    object-fit: cover;
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
 
     @media (max-width: 1280px) {
@@ -31,6 +31,11 @@ const StyledWrapper = styled.div`
 
       filter: brightness(0.6);
       box-shadow: none;
+    }
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
     }
   }
 

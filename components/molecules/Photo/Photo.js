@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import StyledWrapper from './Photo.styles';
 
 const Photo = ({ photoData: { url, alt } }) => {
@@ -7,14 +8,18 @@ const Photo = ({ photoData: { url, alt } }) => {
 
   return (
     <StyledWrapper>
-      <img src={url} alt={alt} onClick={() => setIsActive(true)} />
+      <Image
+        src={url}
+        alt={alt}
+        layout="fill"
+        onClick={() => setIsActive(true)}
+      />
 
       {isActive && (
-        <div
-          className="active-photo-container"
-          onClick={() => setIsActive(false)}
-        >
-          <img src={url} alt={alt} />
+        <div className="active-photo-shadow" onClick={() => setIsActive(false)}>
+          <div className="active-photo-container">
+            <Image src={url} alt={alt} layout="fill" />
+          </div>
         </div>
       )}
     </StyledWrapper>

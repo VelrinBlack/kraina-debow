@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { formatDate } from 'helpers';
 import Tag from 'components/atoms/Tag/Tag';
 import StyledWrapper from './BlogArticleCard.styles';
@@ -8,7 +9,10 @@ const BlogArticleCard = ({ image, title, tags, createdAt, id }) => (
   <Link href={`/blog/${id}`}>
     <a>
       <StyledWrapper>
-        <img src={image.url} alt={image.alt} />
+        {/* <img src={image.url} alt={image.alt} /> */}
+        <div className="image-container">
+          <Image src={image.url} alt={image.alt} layout="fill" />
+        </div>
 
         <div className="container">
           <time dateTime={createdAt} className="date-created">

@@ -18,15 +18,17 @@ const StyledWrapper = styled.div`
     }
   }
 
-  img {
-    width: calc(100% + 2px);
+  .image-container {
+    position: relative;
+    width: 100%;
     height: 300px;
-    transform: translate(-1px, -1px);
 
-    object-fit: cover;
+    img {
+      object-fit: cover;
 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
   }
 
   .title {

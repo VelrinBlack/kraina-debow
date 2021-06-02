@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { scrollToRef } from 'helpers';
 import Logo from 'components/molecules/Logo/Logo';
 import Navbar from 'components/molecules/Navbar/Navbar';
@@ -27,7 +28,13 @@ const Header = ({
 
   return (
     <StyledWrapper isHomePage={isHomePage}>
-      <img src={backgroundImage} className="background" />
+      <Image
+        src={backgroundImage}
+        layout="fill"
+        alt="tło"
+        className="background"
+      />
+
       <div className="top-bar">
         {isSmallScreen ? (
           <>
