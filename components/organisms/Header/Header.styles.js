@@ -18,15 +18,13 @@ const StyledWrapper = styled.header`
 
     filter: ${({ isHomePage }) => (!isHomePage ? 'brightness(0.7)' : 'none')};
     object-fit: cover;
-
-    z-index: -1;
   }
 
   .top-bar {
     display: flex;
     justify-content: space-between;
 
-    z-index: 0;
+    z-index: 1;
   }
 
   .text-container {
