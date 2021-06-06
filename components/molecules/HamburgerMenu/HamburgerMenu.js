@@ -10,6 +10,7 @@ const HamburgerMenu = () => {
       <nav className={`${isOpen && 'is-open'}`}>
         <button
           className="closing-button"
+          aria-label="close navigation"
           onClick={() => setIsOpen(false)}
         ></button>
 
@@ -23,6 +24,7 @@ const HamburgerMenu = () => {
 
       <button
         className="opening-button"
+        aria-label="open navigation"
         onClick={() => setIsOpen(true)}
       ></button>
     </StyledWrapper>
