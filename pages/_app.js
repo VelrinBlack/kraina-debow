@@ -11,6 +11,24 @@ const App = ({ Component, pageProps }) => (
     <ThemeProvider theme={theme}>
       <Head>
         <title>Kraina Dębów</title>
+        <meta
+          name="description"
+          content="Szlakami natury w poszukiwaniu siebie..."
+        />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Kraina Dębów" />
+        <meta property="og:url" content="https://kraina-debow.vercel.app/" />
+        <meta
+          property="og:image"
+          content="https://kraina-debow.vercel.app/images/og_image.png"
+        />
+        <meta
+          property="og:description"
+          content="Szlakami natury w poszukiwaniu siebie..."
+        />
+        <meta property="og:locale" content="pl_PL" />
+
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;600;700&display=swap"
