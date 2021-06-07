@@ -21,10 +21,10 @@ const StyledWrapper = styled.section`
 
     border-radius: 10px;
     object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 25%);
 
     @media (max-width: 1280px) {
       height: fit-content;
-      z-index: 1;
     }
     @media (max-width: 1024px) {
       width: 50%;
@@ -51,6 +51,8 @@ const StyledWrapper = styled.section`
     }) => `linear-gradient(to right bottom, ${lightGreen}, ${darkGreen})`};
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+
+    z-index: -1;
 
     @media (max-width: 1280px) {
       width: 100%;
