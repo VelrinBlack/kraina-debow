@@ -9,7 +9,6 @@ const BlogArticleCard = ({ image, title, tags, createdAt, id }) => (
   <Link href={`/blog/${id}`}>
     <a>
       <StyledWrapper>
-        {/* <img src={image.url} alt={image.alt} /> */}
         <div className="image-container">
           <Image src={image.url} alt={image.alt} layout="fill" />
         </div>

@@ -5,7 +5,7 @@ import isEmail from 'validator/lib/isEmail';
 import EmailSentPopup from 'components/molecules/EmailSentPopup/EmailSentPopup';
 import StyledWrapper from './ContactForm.styles';
 
-const emailApiUrl = process.env.NEXT_PUBLIC_EMAIL_API_URL;
+const emailApiUrl = process.env.NEXT_PUBLIC_EMAIL_API_URL || '';
 
 const ContactForm = () => {
   const {
@@ -53,7 +53,7 @@ const ContactForm = () => {
           {errors.email?.type === 'validate'
             ? 'Adres email jest nieprawidłowy'
             : errors.name || errors.email || errors.message
-            ? 'Wypełnij proszę wszytstkie pola'
+            ? 'Wypełnij proszę wszystkie pola'
             : null}
         </div>
 

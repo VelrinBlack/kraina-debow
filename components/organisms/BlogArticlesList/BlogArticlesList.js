@@ -4,7 +4,7 @@ import Loader from 'components/atoms/Loader/Loader';
 import BlogArticleCard from 'components/molecules/BlogArticleCard/BlogArticleCard';
 import StyledWrapper from './BlogArticlesList.styles';
 
-const query = gql`
+export const query = gql`
   query Articles($articlesLength: IntType) {
     allArticles(first: 3, skip: $articlesLength) {
       id

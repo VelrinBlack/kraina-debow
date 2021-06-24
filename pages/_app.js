@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import { ApolloProvider } from '@apollo/client';
-import GlobalStyle from 'styles/globalStyle';
 import theme from 'styles/theme';
+import GlobalStyle from 'styles/globalStyle';
+import { ApolloProvider } from '@apollo/client';
 import apolloClient from 'apolloClient';
 
 const App = ({ Component, pageProps }) => (

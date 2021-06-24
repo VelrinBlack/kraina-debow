@@ -13,10 +13,15 @@ const Photo = ({ photoData: { url, alt } }) => {
         alt={alt}
         layout="fill"
         onClick={() => setIsActive(true)}
+        data-testid="preview photo"
       />
 
       {isActive && (
-        <div className="active-photo-shadow" onClick={() => setIsActive(false)}>
+        <div
+          className="active-photo-shadow"
+          onClick={() => setIsActive(false)}
+          data-testid="actual photo"
+        >
           <div className="active-photo-container">
             <Image src={url} alt={alt} layout="fill" />
           </div>

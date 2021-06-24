@@ -1,0 +1,75 @@
+{
+  "BlogArticlesList": {
+    "allArticles": [
+      {
+        "id": "1",
+        "image": {
+          "url": "-",
+          "alt": "-"
+        },
+        "title": "Test title 1",
+        "tags": ["-"],
+        "createdAt": "-"
+      },
+      {
+        "id": "2",
+        "image": {
+          "url": "-",
+          "alt": "-"
+        },
+        "title": "Test title 2",
+        "tags": ["-"],
+        "createdAt": "-"
+      }
+    ]
+  },
+  "News": {
+    "allArticles": [
+      {
+        "id": "1",
+        "image": {
+          "url": "-",
+          "alt": "-"
+        },
+        "title": "Test title 1",
+        "tags": ["-"]
+      },
+      {
+        "id": "2",
+        "image": {
+          "url": "-",
+          "alt": "-"
+        },
+        "title": "Test title 2",
+        "tags": ["-"]
+      },
+      {
+        "id": "3",
+        "image": {
+          "url": "-",
+          "alt": "-"
+        },
+        "title": "Test title 3",
+        "tags": ["-"]
+      }
+    ]
+  },
+  "Photos": {
+    "allPhotos": [
+      {
+        "photo": {
+          "id": "1",
+          "url": "-",
+          "alt": "Test alt 1"
+        }
+      },
+      {
+        "photo": {
+          "id": "2",
+          "url": "-",
+          "alt": "Test alt 2"
+        }
+      }
+    ]
+  }
+}

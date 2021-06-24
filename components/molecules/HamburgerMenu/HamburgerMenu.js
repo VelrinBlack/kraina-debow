@@ -7,7 +7,7 @@ const HamburgerMenu = () => {
 
   return (
     <StyledWrapper>
-      <nav className={`${isOpen && 'is-open'}`}>
+      <nav className={`${isOpen && 'is-open'}`} data-testid="hamburger nav">
         <button
           className="closing-button"
           aria-label="close navigation"

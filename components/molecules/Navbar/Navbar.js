@@ -20,6 +20,7 @@ const Navbar = ({ isHomePage }) => {
     <StyledWrapper
       className={currentScrollPosition > 200 && 'centered'}
       isHomePage={isHomePage}
+      data-testid="navbar"
     >
       <ul>
         <NavigationLink text="Strona Główna" destination="/" />
