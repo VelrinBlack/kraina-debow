@@ -29,6 +29,11 @@ const App = ({ Component, pageProps }) => (
         />
         <meta property="og:locale" content="pl_PL" />
 
+        <meta
+          name="google-site-verification"
+          content="SfYJyXA-9BBiVPFVVUpzdPq3kRZNJpJuyKd6P_IGgbg"
+        />
+
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@400;600;700&display=swap"
